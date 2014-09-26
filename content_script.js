@@ -96,6 +96,11 @@ function handleText(textNode)
 	v = v.replace(/shit/g, "plop dumps and waggle sags");
     v = v.replace(/Shit/g, "Plop dumps and waggle sags");
 	v = v.replace(/SHIT/g, "PLOP DUMPS AND WAGGLE SAGS");
+
+	// Fucking
+	v = v.replace(/fucking/g, "flipping");
+    v = v.replace(/Fucking/g, "Flipping");
+	v = v.replace(/FUCKING/g, "FLIPPING");
 	
 	textNode.nodeValue = v;
 }
