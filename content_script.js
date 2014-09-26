@@ -53,9 +53,9 @@ function handleText(textNode)
     var insultArraySentence = ["Ding-dong", "Poo brain", "Dingus", "Jerk"];
     var insultArrayUpper = ["DING-DONG", "POO BRAIN", "DINGUS", "JERK"];
 
-    var originalInsultsLower = ["\\bbitch\\b", "\\bmotherfucker\\b", "\\bfucker\\b", "\\basshole\\b", "\\bshithead\\b", "\\bdouchebag\\b", "\\bdouche\\b", "\\bcunt\\b", "\\bdumbass\\b", "\\bnigga\\b"];
-    var originalInsultsSentence = ["\\bBitch\\b", "\\bMotherfucker\\b", "\\bFucker\\b", "\\bAsshole\\b", "\\bShithead\\b", "\\bDouchebag\\b", "\\bDouche\\b", "\\bCunt\\b", "\\bDumbass\\b", "\\bNigga\\b"];
-    var originalInsultsUpper = ["\\bBITCH\\b", "\\bMOTHERFUCKER\\b", "\\bFUCKER\\b", "\\bASSHOLE\\b", "\\bSHITHEAD\\b", "\\bDOUCHEBAG\\b", "\\bDOUCHE\\b", "\\bCUNT\\b", "\\bDUMBASS\\b", "\\bNIGGA\\b"];
+    var originalInsultsLower = ["bitch", "motherfucker", "fucker", "asshole", "shithead", "douchebag", "douche", "cunt", "dumbass", "nigga"];
+    var originalInsultsSentence = ["Bitch", "Motherfucker", "Fucker", "Asshole", "Shithead", "Douchebag", "Douche", "Cunt", "Dumbass", "Nigga"];
+    var originalInsultsUpper = ["BITCH", "MOTHERFUCKER", "FUCKER", "ASSHOLE", "SHITHEAD", "DOUCHEBAG", "DOUCHE", "CUNT", "DUMBASS", "NIGGA"];
 
 	v = v.replace(new RegExp(originalInsultsLower.join("|"), "g"), insultArrayLower[Math.floor(Math.random()*insultArrayLower.length)]);
     v = v.replace(new RegExp(originalInsultsSentence.join("|"), "g"), insultArraySentence[Math.floor(Math.random()*insultArraySentence.length)]);
