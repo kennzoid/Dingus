@@ -5,7 +5,7 @@ Replaces curse words with Adventure Time phrases!
 
 To install:
 ======
-Put the content_script.js and manifest.json files in a folder (whatever name).
+Put the content_script.js and manifest.json files in a new folder (whatever name).
 
 Navigate to chrome://extensions in Chrome. 
 
