@@ -11,5 +11,5 @@ Navigate to chrome://extensions in Chrome.
 
 Check to enable Developer Mode.
 
-Click on load packed extension, select the folder you created.
+Click on load unpacked extension, select the folder you created.
 
