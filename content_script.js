@@ -49,13 +49,13 @@ function handleText(textNode)
 	v = v.replace(/\bSON OF A BITCH\b/g, "SON OF A TOOT");
 
     // General insults
-    var insultArrayLower = ["ding-dong", "poo brain", "dingus", "jerk"];
-    var insultArraySentence = ["Ding-dong", "Poo brain", "Dingus", "Jerk"];
-    var insultArrayUpper = ["DING-DONG", "POO BRAIN", "DINGUS", "JERK"];
+    var insultArrayLower = ["ding-dong", "poo brain", "dingus"];
+    var insultArraySentence = ["Ding-dong", "Poo brain", "Dingus"];
+    var insultArrayUpper = ["DING-DONG", "POO BRAIN", "DINGUS"];
 
-    var originalInsultsLower = ["bitch", "motherfucker", "fucker", "asshole", "shithead", "douchebag", "douche", "cunt", "dumbass", "nigga", "whore"];
-    var originalInsultsSentence = ["Bitch", "Motherfucker", "Fucker", "Asshole", "Shithead", "Douchebag", "Douche", "Cunt", "Dumbass", "Nigga", "Whore"];
-    var originalInsultsUpper = ["BITCH", "MOTHERFUCKER", "FUCKER", "ASSHOLE", "SHITHEAD", "DOUCHEBAG", "DOUCHE", "CUNT", "DUMBASS", "NIGGA", "WHORE"];
+    var originalInsultsLower = ["bitch", "motherfucker", "fucker", "asshole", "shithead", "douchebag", "douche", "cunt", "dumbass", "nigga", "whore", "jerk", "mothafucka", "motherfucka", "nigger", "faggot", "fag", "slut"];
+    var originalInsultsSentence = ["Bitch", "Motherfucker", "Fucker", "Asshole", "Shithead", "Douchebag", "Douche", "Cunt", "Dumbass", "Nigga", "Whore", "Jerk", "Mothafucka", "Motherfucka", "Nigger", "Faggot", "Fag", "Slut"];
+    var originalInsultsUpper = ["BITCH", "MOTHERFUCKER", "FUCKER", "ASSHOLE", "SHITHEAD", "DOUCHEBAG", "DOUCHE", "CUNT", "DUMBASS", "NIGGA", "WHORE", "JERK", "MOTHAFUCKA", "MOTHERFUCKA", "NIGGER", "FAGGOT", "FAG", "SLUT"];
 
 	v = v.replace(new RegExp(originalInsultsLower.join("|"), "g"), insultArrayLower[Math.floor(Math.random()*insultArrayLower.length)]);
     v = v.replace(new RegExp(originalInsultsSentence.join("|"), "g"), insultArraySentence[Math.floor(Math.random()*insultArraySentence.length)]);
@@ -79,9 +79,9 @@ function handleText(textNode)
 	var buttArraySentence = ["Buns", "Hams", "Patoot", "Stump"];
 	var buttArrayUpper = ["BUNS", "HAMS", "PATOOT", "STUMP"];
 
-	var originalButtLower = ["\\bass\\b", "\\bbutt\\b"];
-	var originalButtSentence = ["\\bAss\\b", "\\bButt\\b"];
-	var originalButtUpper = ["\\bASS\\b", "\\bBUTT\\b"];
+	var originalButtLower = ["\\bass\\b", "\\bbutt\\b", "\\banus\\b"];
+	var originalButtSentence = ["\\bAss\\b", "\\bButt\\b", "\\bAnus\\b"];
+	var originalButtUpper = ["\\bASS\\b", "\\bBUTT\\b", "\\bANUS\\b"];
 
 	v = v.replace(new RegExp(originalButtLower.join("|"), "g"), buttArrayLower[Math.floor(Math.random()*buttArrayLower.length)]);
     v = v.replace(new RegExp(originalButtSentence.join("|"), "g"), buttArraySentence[Math.floor(Math.random()*buttArraySentence.length)]);
@@ -93,14 +93,24 @@ function handleText(textNode)
 	v = v.replace(/THIS IS LAME/g, "THIS IS PLOP DUMPS AND WAGGLE SAGS");
 
 	// Shit
-	v = v.replace(/shit/g, "plop dumps and waggle sags");
-    v = v.replace(/Shit/g, "Plop dumps and waggle sags");
-	v = v.replace(/SHIT/g, "PLOP DUMPS AND WAGGLE SAGS");
+	v = v.replace(/\bshit\b/g, "plop dumps and waggle sags");
+    v = v.replace(/\bShit\b/g, "Plop dumps and waggle sags");
+	v = v.replace(/\bSHIT\b/g, "PLOP DUMPS AND WAGGLE SAGS");
 
 	// Fucking
-	v = v.replace(/fucking/g, "flipping");
-    v = v.replace(/Fucking/g, "Flipping");
-	v = v.replace(/FUCKING/g, "FLIPPING");
+	v = v.replace(/\bfucking\b/g, "flipping");
+    v = v.replace(/\bFucking\b/g, "Flipping");
+	v = v.replace(/\bFUCKING\b/g, "FLIPPING");
+
+	// Fucked
+	v = v.replace(/\bfucked/g, "globbed");
+    v = v.replace(/\bFucked/g, "Globbed");
+	v = v.replace(/\bFUCKED/g, "GLOBBED");
+
+	// Fuck alone
+	v = v.replace(/\bfuck/g, "glob");
+    v = v.replace(/\bFuck/g, "Glob");
+	v = v.replace(/\bFUCK/g, "GLOB");
 	
 	textNode.nodeValue = v;
 }
