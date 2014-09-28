@@ -93,9 +93,9 @@ function handleText(textNode)
 	v = v.replace(/THIS IS LAME/g, "THIS IS PLOP DUMPS AND WAGGLE SAGS");
 
 	// Shit
-	v = v.replace(/\bshit\b/g, "plop dumps and waggle sags");
-    v = v.replace(/\bShit\b/g, "Plop dumps and waggle sags");
-	v = v.replace(/\bSHIT\b/g, "PLOP DUMPS AND WAGGLE SAGS");
+	v = v.replace(/shit\b/g, "plop dumps and waggle sags");
+    v = v.replace(/Shit\b/g, "Plop dumps and waggle sags");
+	v = v.replace(/SHIT\b/g, "PLOP DUMPS AND WAGGLE SAGS");
 
 	// Fucking
 	v = v.replace(/\bfucking\b/g, "flipping");
